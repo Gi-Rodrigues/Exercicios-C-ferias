@@ -2,11 +2,12 @@
 // maior deles ou o menor deles. O usuário escolhe qual mostrar. 
 
 #include <stdio.h>
-
+#include <locale.h>
 int main () 
 {
    int n1, n2, n3, n4;
    int opcao;
+   setlocale(LC_ALL, "portuguese");
 
    printf("digite o 1 numeroa: ");
    scanf("%d", &n1);
