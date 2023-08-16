@@ -7,9 +7,12 @@
 // "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como
 // "Inocente".
 
+#include <locale.h>
 #include <stdio.h>
 
 int main() {
+	
+	setlocale(LC_ALL, "portuguese");
     int respostasPositivas = 0;
     
     printf("Responda as seguintes perguntas com '1' para sim e '0' para não:\n");
@@ -37,14 +40,13 @@ int main() {
     respostasPositivas += resposta;
     
     switch (respostasPositivas) {
-        case 2:
+        case 1:
             printf("Suspeita\n");
             break;
-        case 3:
-        case 4:
+        case 2:
             printf("Cúmplice\n");
             break;
-        case 5:
+        case 3:
             printf("Assassino\n");
             break;
         default:
