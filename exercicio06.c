@@ -1,19 +1,32 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
-    int sides[3];
+	
+	setlocale(LC_ALL, "portuguese");
+    int lado1, lado2, lado3;
 
-    for (int i = 0; i < 3; i++) {
-        printf("Informe o valor do lado %d: ", i + 1);
-        scanf("%d", &sides[i]);
+    printf("Informe o valor do lado 1: ");
+    scanf("%d", &lado1);
+
+    printf("Informe o valor do lado 2: ");
+    scanf("%d", &lado2);
+
+    printf("Informe o valor do lado 3: ");
+    scanf("%d", &lado3);
+
+    int sum = lado1 + lado2 + lado3;
+    int max_lado = lado1;
+
+    if (lado2 > max_lado) {
+        max_lado = lado2;
     }
 
-    int sum = 0;
-    for (int i = 0; i < 3; i++) {
-        sum += sides[i];
+    if (lado3 > max_lado) {
+        max_lado = lado3;
     }
 
-    if (sum - sides[0] > sides[0] && sum - sides[1] > sides[1] && sum - sides[2] > sides[2]) {
+    if (sum - max_lado > max_lado) {
         printf("Os lados informados formam um triângulo.\n");
     } else {
         printf("Os lados informados não formam um triângulo.\n");
