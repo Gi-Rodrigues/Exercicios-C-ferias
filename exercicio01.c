@@ -1,7 +1,4 @@
-//FaÃ§a um programa que, apÃ³s um nÃºmero inserido pelo usuÃ¡rio, retorne o
-//prÃ³ximo nÃºmero primo.
- 
- #include <stdio.h>
+#include <stdio.h>
  #include <math.h>
  #include <locale.h>
 
@@ -20,14 +17,13 @@
      n2++;
 
       if (n2 == 2){
-         char mensagem[100];
-            sprintf(mensagem, "O próximo número primo depois de: %d, é %d", n1, n2);
-            printf("%s\n", mensagem);
+      	
+            printf("O próximo número primo depois de: %d, é %d", n1, n2);
             break;
+            
       } else if(n2%2!= 0) {
-         char mensagem[100];
-            sprintf(mensagem, "O próximo número primo depois de: %d, é %d", n1, n2);
-            printf("%s\n", mensagem);
+         
+            printf("O próximo número primo depois de: %d, é %d", n1, n2);
             break;
       }
     }
