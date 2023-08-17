@@ -12,9 +12,7 @@ int main () {
 
   for(int i = 0; i < 10; i++) {
 
-    char instruction[100];
-    sprintf(instruction, "Digite o %d° numero: ", i+1);
-    printf("%s", instruction);
+    printf("Digite o %d° numero: ", i+1);
     scanf("%d", &inputNumber);
 
     if(inputNumber > 0 && inputNumber < 10) {
@@ -22,10 +20,8 @@ int main () {
     }
   }  
 
-  char result[100];
-
-  sprintf(result, "Você digitou %d números que são positivos e menores do que 10.", count);
-  printf("%s", result);
+  
+  printf( "Você digitou %d números que são positivos e menores do que 10.", count);
 
 return 0;
 
